@@ -21,9 +21,6 @@ angular.module('ngDevice').provider('$device', function () {
     var self = this;
     var methods = {};
 
-    if (!self.userAgent) self.setUserAgent();
-    if (!self.vendor) self.setVendor();
-
     var check = function (regexp, str) {
       var str = str || self.userAgent;
       return regexp.test(str);
@@ -35,6 +32,10 @@ angular.module('ngDevice').provider('$device', function () {
 
     methods.isSafari = function () {
       return check(/safari/) && check(/apple computer/, self.vendor)
+    };
+
+    methods.isFirefox = function () {
+      return check(/firefox/)
     };
 
     return methods;
