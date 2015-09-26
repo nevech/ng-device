@@ -1,0 +1,17 @@
+{
+  "name": "ng-device",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nevech/ng-device",
+  "authors": [
+    "Ruslan Nevecherya <r.nevech@gmail.com>"
+  ],
+  "description": "Detect device/browser",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
