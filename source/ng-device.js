@@ -38,6 +38,10 @@ angular.module('ngDevice').provider('$device', function () {
       return check(/firefox/)
     };
 
+    methods.isEdge = function () {
+      return check(/edge\/\d+/)
+    };
+
     // Aliases
     methods.isFF = methods.isFirefox;
 
