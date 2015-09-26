@@ -31,15 +31,19 @@ angular.module('ngDevice').provider('$device', function () {
     };
 
     methods.isSafari = function () {
-      return check(/safari/) && check(/apple computer/, self.vendor)
+      return check(/safari/) && check(/apple computer/, self.vendor);
     };
 
     methods.isFirefox = function () {
-      return check(/firefox/)
+      return check(/firefox/);
     };
 
     methods.isEdge = function () {
-      return check(/edge\/\d+/)
+      return check(/edge\/\d+/);
+    };
+
+    methods.isOpera = function () {
+      return check(/opr\/\d+/);
     };
 
     // Aliases
