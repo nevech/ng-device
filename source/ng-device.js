@@ -38,6 +38,9 @@ angular.module('ngDevice').provider('$device', function () {
       return check(/firefox/)
     };
 
+    // Aliases
+    methods.isFF = methods.isFirefox;
+
     return methods;
   };
 
