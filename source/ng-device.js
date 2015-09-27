@@ -46,6 +46,10 @@ angular.module('ngDevice').provider('$device', function () {
       return check(/opr\/\d+/);
     };
 
+    methods.isIE = function () {
+      return check(/msie|trident\/\d+/)
+    };
+
     // Aliases
     methods.isFF = methods.isFirefox;
 
