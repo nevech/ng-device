@@ -3,7 +3,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var karma = require('karma').server;
+var Server = require('karma').Server;
 
 gulp.task('build', function () {
   gulp.src('source/*.js')
@@ -16,10 +16,12 @@ gulp.task('build', function () {
 });
 
 gulp.task('test', function (done) {
-  karma.start({
+  new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
-  }, done);
+  }, function () {
+    done();
+  }).start();
 });
 
 gulp.task('watch', function () {
